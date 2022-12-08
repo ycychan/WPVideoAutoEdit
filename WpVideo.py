@@ -43,7 +43,7 @@ class WpVideo:
         file = open(self.save_path, 'w+', encoding='UTF-8')
         for file_url in self.scan_dir():
             #  剔除标题无用的内容,将会用于视频标题
-            file_url_ = re.sub(r'[.*?]', '', re.sub('(.mp4)', '', file_url))
+            file_url_ = re.sub(r'\[1080P]\[GB]', '', re.sub('(.mp4)', '', file_url))
             file.write('\n')
             file.write('\n')
             file.write('<!-- wp:group {"layout":{"type":"constrained"}} -->')
